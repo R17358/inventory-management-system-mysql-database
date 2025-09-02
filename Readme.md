@@ -26,7 +26,7 @@ This backend provides **Admin** and **User** functionalities for managing **sale
 ---
 
 ## 📂 Project Structure
-
+```
 inventory-management-backend/
 │── config/
 │ ├── db.js # MySQL database connection
@@ -59,7 +59,7 @@ inventory-management-backend/
 │── .env # Environment variables
 │── server.js # Entry point
 │── package.json
-
+```
 
 ---
 
