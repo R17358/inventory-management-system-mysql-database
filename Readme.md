@@ -27,6 +27,38 @@ This backend provides **Admin** and **User** functionalities for managing **sale
 
 ## 📂 Project Structure
 
+inventory-management-backend/
+│── config/
+│ ├── db.js # MySQL database connection
+│ ├── config.env # Environment variables
+│
+│── controllers/
+│ ├── adminController.js # Admin-related logic
+│ ├── authController.js # Auth (signup, signin) logic
+│ ├── orderController.js # Sales & Purchase order logic
+│ ├── reportController.js # Reports, stock, performance
+│
+│── middleware/
+│ ├── authMiddleware.js # Auth & role-based access control
+│
+│── models/
+│ ├── userModel.js # User schema & queries
+│ ├── orderModel.js # Sales & purchase order queries
+│ ├── stockModel.js # Stock management queries
+│
+│── routes/
+│ ├── adminRoutes.js # Admin endpoints
+│ ├── authRoutes.js # Signup & signin
+│ ├── orderRoutes.js # Sales & purchase orders
+│ ├── reportRoutes.js # Reports, stock, analytics
+│
+│── utils/
+│ ├── errorHandler.js # Centralized error handling
+│ ├── response.js # API response formatter
+│
+│── .env # Environment variables
+│── server.js # Entry point
+│── package.json
 
 
 ---
