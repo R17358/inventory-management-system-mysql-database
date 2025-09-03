@@ -1,16 +1,23 @@
 const express = require('express');
 const router = express.Router();
-const adminCtrl = require('../controllers/adminController');
 const auth = require('../middleware/auth');
 const { requireRole } = require('../middleware/role');
+
+const {
+  createUserByAdmin,
+  getAllUsers,
+  updateUser,
+  suspendUser,
+  deleteUser
+} = require('../controllers/adminController');
 
 // All admin-only
 router.use(auth, requireRole('admin'));
 
-router.post('/users', adminCtrl.createUserByAdmin);
-router.get('/users', adminCtrl.getAllUsers);
-router.put('/users/:id', adminCtrl.updateUser);
-router.patch('/users/:id/suspend', adminCtrl.suspendUser);
-router.delete('/users/:id', adminCtrl.deleteUser);
+router.post('/users', createUserByAdmin);
+router.get('/users', getAllUsers);
+router.put('/users/:id', updateUser);
+router.patch('/users/:id/suspend', suspendUser);
+router.delete('/users/:id', deleteUser);
 
 module.exports = router;

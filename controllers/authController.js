@@ -19,6 +19,38 @@ exports.adminSignup = async (req, res) => {
   }
 };
 
+// const { sequelize } = require('../models'); // Make sure sequelize instance is exported
+
+// exports.adminSignup = async (req, res) => {
+//   try {
+//     const { name, email, password } = req.body;
+
+//     // Check if email exists
+//     const [results] = await sequelize.query(
+//       'SELECT * FROM Users WHERE email = ?',
+//       { replacements: [email] }
+//     );
+
+//     if (results.length > 0) {
+//       return res.status(400).json({ message: 'Email already used' });
+//     }
+
+//     // Hash password
+//     const hash = await bcrypt.hash(password, SALT_ROUNDS);
+
+//     // Insert admin
+//     await sequelize.query(
+//       'INSERT INTO Users (name, email, password, role) VALUES (?, ?, ?, ?)',
+//       { replacements: [name, email, hash, 'admin'] }
+//     );
+
+//     return res.status(201).json({ message: 'Admin created', admin: { email } });
+//   } catch (err) {
+//     return res.status(500).json({ message: err.message });
+//   }
+// };
+
+
 exports.signIn = async (req, res) => {
   try {
     const { email, password } = req.body;

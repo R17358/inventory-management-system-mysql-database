@@ -27,7 +27,7 @@ const PORT = process.env.PORT || 4000;
   try {
     await sequelize.authenticate();
     console.log('DB connected');
-    // For development you can use { force: true } to recreate tables — careful with data
+   
     await sequelize.sync(); // sync models
     console.log('Models synced');
 
