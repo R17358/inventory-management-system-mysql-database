@@ -26,7 +26,7 @@ This backend provides **Admin** and **User** functionalities for managing **sale
 ---
 
 ## 📂 Project Structure
-
+```
 inventory-management-backend/
 │── config/
 │ ├── db.js # MySQL database connection
@@ -59,8 +59,7 @@ inventory-management-backend/
 │── .env # Environment variables
 │── server.js # Entry point
 │── package.json
-
-
+```
 
 ---
 
@@ -68,8 +67,8 @@ inventory-management-backend/
 
 ### 1️⃣ Clone Repository
 ```bash
-git clone https://github.com/R17358/inventory-management-backend.git
-cd inventory-management-backend
+git clone https://github.com/R17358/inventory-management-system-mysql-database.git
+cd inventory-management-system-mysql-database
 
 2️⃣ Install Dependencies
 
